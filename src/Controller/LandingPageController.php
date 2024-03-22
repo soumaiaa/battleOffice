@@ -144,11 +144,11 @@ class LandingPageController extends AbstractController
             ]);
             return $this->redirect($checkout_session->url);
         } elseif ($paymentMethod === 'paypal') {
-
+            $YOUR_DOMAIN = 'http://127.0.0.1:8000/';
             // Remplacez 'sandbox' par 'live' si vous utilisez un environnement de production
             $environment = new CoreSandboxEnvironment($this->getParameter('paypalClientId'), $this->getParameter('paypalSecret'));
             $client = new CorePayPalHttpClient($environment);
-
+   
             $request = new OrdersCreateRequest();
             $request->prefer('return=representation');
             $request->body = [
@@ -156,9 +156,12 @@ class LandingPageController extends AbstractController
                 "purchase_units" => [[
                     "amount" => [
                         "currency_code" => "EUR",
-                        "value" =>  $unitAmount // Montant à payer
+                        "value" =>  $orders->getProducts()->getPrice()// Montant à payer
                     ]
-                ]]
+                ]],
+              
+                'success_url' => $YOUR_DOMAIN . '/confirmation',
+                'cancel_url' => $YOUR_DOMAIN . '/',
             ];
             $response = $client->execute($request);
             // Obtenez l'URL d'approbation PayPal
