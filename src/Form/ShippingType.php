@@ -16,42 +16,50 @@ class ShippingType extends AbstractType
     {
         $builder
             ->add('address',TextType::class,[
+                'required' => false,
                 'label'=> 'Adresse',
                 'attr' => [
                     'type'=>'text'
                 ]
             ])
             ->add('complementAdr',TextType::class,[
+                'required' => false,
                 'label'=> 'Complément adr.',
                 'attr' => [
                     'type'=>'text'
                 ]
             ])
             ->add('city',TextType::class,[
+                'required' => false,
                 'label'=> 'Ville',
             ])
             ->add('codePostal',TextType::class,[
+                'required' => false,
                 'label'=> 'Code postal',
                 'attr' => [
                     'type'=>'text'
                 ]
             ])
             ->add('phone',TextType::class,[
+                'required' => false,
                 'label'=> 'Téléphone',
             ])
             ->add('prenom',TextType::class,[
+                'required' => false,
                 'label'=> 'Prénom',
                 'attr' => [
                     'type'=>'text'
                 ]
             ])
             ->add('nom',TextType::class,[
+                'required' => false,
                 'label'=> 'Nom',
                 'attr' => [
                     'type'=>'text'
                 ]
             ])
             ->add('country', EntityType::class, [
+                'required' => false,
                 'class' => Countrys::class,
                 'choice_label' => 'country',
                 'label'=>'Pays',

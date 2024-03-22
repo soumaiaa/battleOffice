@@ -17,66 +17,41 @@
         <p class="h6 center-align">Remplissez ce formulaire</p>
         <div class="form-wrapper">
             <div class="input-field">
-                 {# <input type="text"> #}
-                {# <label>Prénom</label>  #}
                 {{ form_row(form.firstName) }}
                 <div class="form-error"></div>
             </div>
             <div class="input-field">
-                {# <input type="text"> #}
-                {# <label>Nom</label>  #}
                 {{ form_row(form.lastName) }}
                 <div class="form-error"></div>
             </div>
             <div class="input-field">
-                {# <input type="text"> #}
-                {# <label>Adresse</label> #}
                 {{ form_row(form.address1) }}
                 <div class="form-error"></div>
             </div>
             <div class="input-field">
-                {# <input type="text"> #}
-                {# <label>Complément adr.</label> #}
                  {{ form_row(form.complementAdr1) }}
                 <div class="form-error"></div>
             </div>
             <div class="input-field">
-                {# <input type="text"> #}
-                {# <label>Ville</label> #}
                 {{ form_row(form.city) }}
                 <div class="form-error"></div>
             </div>
             <div class="input-field">
-                {# <input type="text"> #}
-                {# <label>Code postal</label> #}
                 {{ form_row(form.codePostal) }}
                 <div class="form-error"></div>
             </div>
             <div class="input-field">
-                 {# <select>
-                    <option>France</option>
-                </select> #}
-                {# <label>Pays</label>  #}
                 {{ form_row(form.country) }}
                 <div class="form-error"></div>
             </div>
             <div class="input-field">
-                {# <input type="text"> #}
-                {# <label>Téléphone</label> #}
                  {{ form_row(form.phone) }}
                 <div class="form-error"></div>
             </div>
             <div class="input-field">
-                {# <input type="text"> #}
-                {# <label>Email</label> #}
                 {{ form_row(form.email) }}
                 <div class="form-error"></div>
             </div>
-            {# <div class="input-field">
-                <input type="text">
-                <label>Confirmation email</label>
-                <div class="form-error"></div>
-            </div> #}
         </div>
     </div>
     <ul class="collapsible">
@@ -84,59 +59,41 @@
             <div class="collapsible-header"><i class="material-icons">markunread_mailbox</i>Adresse de livraison différente ?</div>
             <div class="collapsible-body">
                 <div class="input-field">
-                    {# <input type="text"> #}
-                    {# <label>Prénom</label> #}
                      {{ form_row(form.address2.prenom) }}
                     <div class="form-error"></div>
                 </div>
                 <div class="input-field">
-                    {# <input type="text"> #}
-                    {# <label>Nom</label> #}
                       {{ form_row(form.address2.nom) }}
                     <div class="form-error"></div>
                 </div>
                 <div class="input-field">
-                    {# <input type="text"> #}
-                    {# <label>Adresse</label> #}
                       {{ form_row(form.address2.address) }}
                     <div class="form-error"></div>
                 </div>
                 <div class="input-field">
-                    {# <input type="text"> #}
-                    {# <label>Complément adr.</label> #}
                     {{ form_row(form.address2.complementAdr) }}
                     <div class="form-error"></div>
                 </div>
                 <div class="input-field">
-                    {# <input type="text"> #}
-                    {# <label>Ville</label> #}
                      {{ form_row(form.address2.city) }}
                     <div class="form-error"></div>
                 </div>
                 <div class="input-field">
-                    {# <input type="text"> #}
-                    {# <label>Code postal</label> #}
                       {{ form_row(form.address2.codePostal) }}
                     <div class="form-error"></div>
                 </div>
                 <div class="input-field">
-                    {# <select>
-                        <option>France</option>
-                    </select> #}
-                    {# <label>Pays</label> #}
                      {{ form_row(form.address2.country) }}
                     <div class="form-error"></div>
                 </div>
-                <div class="input-field">
-                    {# <input type="text"> #}
-                    {# <label>Téléphone</label> #}
+                <div class="input-field">        
                      {{ form_row(form.address2.phone) }}
                     <div class="form-error"></div>
                 </div>
             </div>
         </li>
     </ul>
-     {# <button type="submit" class="btn-large btn-block waves-effect waves-light" name='submit'>continuer</button> #}
+    
 </div>
 
 {# Etape 3 #}
