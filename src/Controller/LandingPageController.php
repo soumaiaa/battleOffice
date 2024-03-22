@@ -74,7 +74,7 @@ class LandingPageController extends AbstractController
             // dd($clients);         
             $entityManager->persist($clients);
             $entityManager->flush();
-            $this->addFlash('success', 'Profile updated successfully.');
+            // $this->addFlash('success', 'Profile updated successfully.');
 
             $orders = new Orders();
             $orders->setClient($clients);
@@ -139,7 +139,7 @@ class LandingPageController extends AbstractController
                     ],
                 ],
                 'mode' => 'payment',
-                'success_url' => $YOUR_DOMAIN . '/',
+                'success_url' => $YOUR_DOMAIN . '/confirmation',
                 'cancel_url' => $YOUR_DOMAIN . '/',
             ]);
             return $this->redirect($checkout_session->url);
